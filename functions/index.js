@@ -8,7 +8,7 @@ const db = firebase.firestore();
 exports.quotationsByLocation = functions.https.onRequest(
   async (request, response) => {
     const getGeohashRange = (latitude, longitude, distance) => {
-      distance = distance * 1.60934; // from km to miles
+      distance = distance * 0.621371; // from km to miles
       const lat = 0.0144927536231884; // degrees latitude per mile
       const lon = 0.0181818181818182; // degrees longitude per mile
 
